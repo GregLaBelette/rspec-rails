@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
+<<<<<<< HEAD
   before_action :set_post, only: %i[show edit update destroy]
   # before_action :authenticate_user
 
   include PostsHelper
+=======
+  before_action :set_post, only: %i[ show edit update destroy ]
+>>>>>>> e5dda2ca2943b807e5e5173420a7b52ce5074dd8
 
   # GET /posts or /posts.json
   def index
@@ -25,7 +29,10 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+<<<<<<< HEAD
     @post = assign_post_creator(@post, current_user)
+=======
+>>>>>>> e5dda2ca2943b807e5e5173420a7b52ce5074dd8
 
     respond_to do |format|
       if @post.save
@@ -63,6 +70,7 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+<<<<<<< HEAD
   def set_post
     @post = Post.find(params[:id])
   end
@@ -71,4 +79,14 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body)
   end
+=======
+    def set_post
+      @post = Post.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def post_params
+      params.require(:post).permit(:title, :body, :user_id, :views)
+    end
+>>>>>>> e5dda2ca2943b807e5e5173420a7b52ce5074dd8
 end

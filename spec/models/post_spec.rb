@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
+<<<<<<< HEAD
   current_user = User.first_or_create!(email: 'tes@test.com', password: 'password', password_confirmation: 'password')
   it 'has a title' do
     post = Post.new(
@@ -69,4 +70,7 @@ RSpec.describe Post, type: :model do
 
     expect(post.views).to be_a(Integer)
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> e5dda2ca2943b807e5e5173420a7b52ce5074dd8
 end
