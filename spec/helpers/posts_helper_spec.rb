@@ -11,7 +11,6 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe PostsHelper, type: :helper do
-<<<<<<< HEAD
   include PostsHelper
   it 'assigns a user to a post' do
     creator = User.first_or_create!(email: 'tes@test.com', password: 'password', password_confirmation: 'password')
@@ -23,7 +22,4 @@ RSpec.describe PostsHelper, type: :helper do
     returned_post = assign_post_creator(@post, creator)
     expect(returned_post.user).to be(creator)
   end
-=======
-  pending "add some examples to (or delete) #{__FILE__}"
->>>>>>> e5dda2ca2943b807e5e5173420a7b52ce5074dd8
 end
